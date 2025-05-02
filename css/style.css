@@ -1,0 +1,704 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --pink:rgb(218, 112, 214); 
+}
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+/**********************************Página inicial**********************************************/
+
+body.home{
+    background-image: url(../img/aesthetic-background-with-gradient-neon-led-light-effect.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+section.home {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 30px 30px 30px;
+}
+
+
+/* HEADER */
+header.home {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header.home .logo {
+    color: white;
+    font-size: 1.8em;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: var(--pink);
+    border-radius: 5px;
+    padding: 0 10px;
+    font-family: "Lora", serif;
+    font-weight: 600;
+}
+
+header.home .logo:hover {
+    color:   var(--pink);
+    background: whitesmoke;
+    transition: 1s;
+}
+
+header.home .navbar {
+    position: relative;
+    display: flex;
+}
+
+header.home .navbar li {
+    list-style: none;
+    margin-left: 30px;
+}
+
+header.home .navbar li a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: 600;
+    padding: 10px;
+    transition: 0.3s;
+    font-size: 1.1em;
+    text-transform: uppercase;
+}
+
+header.home .navbar li a:hover {
+    border-bottom: 5px solid var(--pink);
+    padding: 2px;
+}
+
+/* CONTENIDO */
+.contenido {
+    width: 100%;
+    height: 85vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    position: relative;
+    overflow: hidden;
+    margin-top: 15px; 
+    opacity: 0;
+}
+
+/* TITULOBOX */
+.contenido .tituloBox {
+    max-width: 600px;
+    text-align: center;
+    opacity: 0;
+    animation: moveLeft 1s ease forwards;
+    animation-delay: 0s; 
+    animation-play-state: paused;
+}
+
+.contenido .tituloBox h2 {
+    font-size: 2em;
+    text-transform: uppercase;
+    color: whitesmoke;
+}
+
+.contenido .tituloBox h3 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    color: whitesmoke;
+}
+
+.contenido .tituloBox h3 span {
+    background:   var(--pink);
+    color: white;
+    padding: 0 10px;
+    font-family: "Lora", serif;
+    font-weight: 500;
+    border-radius: 20px;
+}
+
+.contenido .tituloBox p {
+    font-size: 1.5em;
+    line-height: 1.5;
+    color: whitesmoke;
+    font-family: "Lora", serif;
+    font-weight: 400;
+    margin: 10px;
+}
+
+.contenido .tituloBox a {
+    text-decoration: none;
+    text-transform: uppercase;
+    background: whitesmoke;
+    color:var(--pink);
+    padding: 10px 20px;
+    border-radius: 20px;
+    letter-spacing: 2px;
+    transition: 0.5s;
+}
+
+.contenido .tituloBox a:hover {
+    color: whitesmoke;
+    background: var(--pink);
+    transition: 0.5s;
+}
+
+/* IMGBOX */
+.contenido .imgBox {
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    animation: moveRight 1s ease forwards;
+    animation-delay: 0s; 
+    animation-play-state: paused; 
+}
+
+.contenido .imgBox img {
+    height: 60vh;
+}
+
+/* COPYRIGHT */
+.copyright {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 100px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyright p {
+    color: whitesmoke;
+    text-align: center;
+}
+
+/* REDES SOCIALES */
+.redesSociales {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    margin-right: 125px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px 0px;
+    list-style: none;
+}
+
+.redesSociales li {
+    padding: 10px;
+}
+
+.redesSociales li a {
+    color: whitesmoke;
+    font-size: 2.5em;
+    transition: 0.3s;
+}
+
+.redesSociales li:hover a {
+    color: black;
+    font-size: 2.5em;
+    transition: 0.3s;
+}
+
+/* CIRCULO DECORATIVO */
+.circulo {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: rgba(78, 238, 233, 0.6);
+    clip-path: circle(620px at right 700px);
+    width: 100%;
+    height: 100%;
+    z-index: -1000;
+}
+
+.circulo2 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: rgba(240, 242, 242, 0.5);
+    clip-path: circle(470px at right 700px);
+    width: 100%;
+    height: 100%;
+    z-index: -1000;
+}
+
+/* ANIMACIONES */
+@keyframes moveLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(-70px); 
+    }
+}
+
+@keyframes moveRight {
+    0% {
+        opacity: 0;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(60px); 
+    }
+}
+
+/* Mensaje intro */
+.intro {
+    width: 100%;
+    height: 100vh;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    background-color: rgba(0, 0, 0, 0.6); /* Optional dark background */
+}
+
+.intro-line {
+    color: white;
+    opacity: 0;
+    animation: fadeInIntro 2s forwards;
+    font-family: "Lora", serif;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.main-line {
+    font-size: 2em;
+    animation-delay: 0.5s;
+}
+
+.sub-line {
+    font-size: 1.2em;
+    animation-delay: 1.5s;
+}
+
+@keyframes fadeInIntro {
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fadeOutIntro {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/*********************************** Página de CV *******************************/
+
+body.cv{
+    background-image: url(../img/minimal-digital-futuristic-technology-background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    color:whitesmoke;
+    text-decoration: none;
+    text-align: left;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+body.cv a {
+    text-decoration: none;
+    text-align: center;
+}
+
+body.cv .logo {
+    color: whitesmoke;
+    font-size: 1em;
+    text-decoration: none;
+    text-transform: uppercase;
+    background:   var(--pink);;
+    border-radius: 5px;
+    padding: 0 10px;
+    font-family: "Lora", serif;
+    font-weight: 600;
+}
+
+body.cv .logo:hover {
+    color:   var(--pink);
+    background: whitesmoke;
+    transition: 1s;
+}
+
+body.cv p {
+    padding-bottom: 0.3rem;
+    margin-top: 1rem;
+    font-family: "Raleway", sans-serif;
+  }
+body.cv h1 {
+    padding-bottom: 0.3rem;
+    margin-top: 2rem;
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+  }
+
+section.cv{
+    margin-bottom: 2rem;}
+  
+section.cv h2 {
+    font-family: "Raleway", sans-serif;
+    border-bottom: 2px solid;
+    padding-bottom: 0.3rem;
+    margin-top: 2rem;
+    text-transform: uppercase;
+    color: whitesmoke;
+  }
+section.cv h3 {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+  }
+section.cv h4 {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    font-family: "Raleway", sans-serif;
+    text-align: right;
+    color:var(--pink)
+  }
+  
+section.cv ul {
+    padding-left: 1.5rem;
+  }
+  
+  #contact{
+    text-align: center;
+    margin-top: 2rem;
+    font-family: "Raleway", sans-serif;
+}
+#about_me{
+    text-align: justify;
+    margin-top: 2rem;
+    font-family: "Raleway", sans-serif;
+}
+
+/* Download button*/
+
+section.download {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+#download_btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-family: "Lora";
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: whitesmoke;
+    background: var(--pink);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+#download_btn:hover {
+    background-color:whitesmoke;
+    color: var(--pink);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
+  }
+
+body.cv #copyright {
+    margin-top: 10px;
+    bottom: 0px;
+    padding: 0 100px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body.cv #copyright p {
+    color: whitesmoke;
+    text-align: center;
+}
+
+
+/*************************** Formulario de contacto ***************************************/
+
+body.contact {
+    background-image: url(../img/minimal-digital-futuristic-technology-background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .formBox {
+    background-color: rgba(255, 255, 255, 0.6); 
+    max-width: 500px;
+    margin: 80px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  }
+  
+.formBox h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #282828;
+
+  }
+  
+form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #282828;
+  }
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid whitesmoke;
+    border-radius: 6px;
+    font-size: 15px;
+  }
+  
+form button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    background-color:var(--pink);
+    border: none;
+    color: white;
+    font-family: "Lora";
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+form button:hover {
+    background-color: rgb(164, 82, 162);
+    transition: 0.5s;
+  }
+
+body.contact .copyright {
+    margin-top: 10px;
+    bottom: 0px;
+    padding: 0 100px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body.contact .copyright p {
+    color: whitesmoke;
+    text-align: center;
+}
+
+/******************************* Projectos ***************************************/
+
+
+
+body.project {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url(../img/minimal-digital-futuristic-technology-background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: whitesmoke;
+    font-family: "Raleway", sans-serif;
+}
+
+.content{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: nowrap; 
+    padding: 40px;
+    flex: 1;
+    width: 100%;
+}
+
+.card{
+    position: relative;
+    width: 300px;
+    height: 350px;
+    margin: 20px;
+}
+
+.card .face{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.card .front{
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0px 5px 10px #000;
+}
+
+.card .front img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /*ajustar el contenido al su contenedor*/
+}
+
+.card .front h3{
+    position: absolute;
+    bottom:0px;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color:whitesmoke;
+    background-color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+}
+
+.card .back{
+    transform: perspective(600px) rotateY(180deg);
+    background-color: rgb(27, 87, 122);
+    padding: 15px;
+    color:whitesmoke; 
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0px 5px 10px #000;
+}
+
+.card .back .link {
+    border-top: 1px solid whitesmoke;
+    height: 80px;
+    line-height: 80px;
+}
+
+.card .front h3{
+    margin-top: 20px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    position: absolute;
+}
+
+.card .back p{
+    letter-spacing: 1px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+
+}
+.card .back .link a{
+    height: 45px;
+    padding: 5px;
+    color:whitesmoke;
+    background-color: var(--pink);
+    border-radius: 5px;
+    font-family: "Lora";
+    font-weight: 600;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.card .back a:hover{   
+    color: var(--pink);
+    background-color: whitesmoke;
+    transition: 0.5s;
+}
+
+.card:hover .front{
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover .back{
+    transform: perspective(600px) rotateY(360deg);
+}
+
+body.project .copyright {
+    margin-top: 10px;
+    bottom: 0px;
+    padding: 0 100px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body.project .copyright p {
+    color: whitesmoke;
+    text-align: center;
+}
+
+footer.project {
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+footer.project .backhome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+
+  }
+
+footer.project .backhome a{
+    text-decoration: none;
+    text-transform: uppercase;
+    background: whitesmoke;
+    color:var(--pink);
+    padding: 10px 20px;
+    border-radius: 20px;
+    letter-spacing: 2px;
+    transition: 0.5s;
+}
+
+footer.project .backhome a:hover {
+    color: whitesmoke;
+    background: var(--pink);
+    transition: 0.5s;
+}
+
