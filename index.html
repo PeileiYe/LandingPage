@@ -3,100 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="img/favicon.jpg" type="image/x-icon">
     <title>Landing Page Web</title>
 </head>
 <body class="home">
-    <section class="home">
-        <div class="circulo"></div>
-        <div class="circulo2"></div>
-        <header class="home">
-            <a href="#" class="logo">Peilei Ye Jin</a>
-            <ul class="navbar">
-                <li>
-                    <a href="cv.html">CV</a>
-                </li>
-                <li>
-                    <a href="project.html">Projects</a>
-                </li>
-                <li>
-                    <a href="#">Services</a>
-                </li>  
-                <li>
-                    <a href="contact.html">Contact Me</a>
-                </li>
-            </ul>
-        </header>
-        <div class="intro">
-            <h1 class="intro-line main-line">Hi, I’m Peilei Ye,</h1>
-            <h2 class="intro-line sub-line">a Junior Programmer with multicultural background and cross-sector experience.</h2>
-        </div>
+    <div class="circulo"></div>
+    <div class="circulo2"></div>
+
+    <header>
+        <a href="index.html" class="logo">Peilei Ye Jin</a>
+        <ul class="navbar">
+            <li>
+                <a href="cv.html">CV</a>
+            </li>
+            <li>
+                <a href="project.html">Projects</a>
+            </li>
+            <li>
+                <a href="#">Services</a>
+            </li>  
+            <li>
+                <a href="contact.html">Contact Me</a>
+            </li>
+        </ul>
+    </header>
+
+    <div class="intro">
+        <h1 class="intro-line main-line">Hi, I’m Peilei Ye,</h1>
+        <h2 class="intro-line sub-line">a Junior Programmer with multicultural background and cross-sector experience.</h2>
+    </div>
         
-        <main>
-            <div class="contenido">
-                <div class="tituloBox">
-                    <h2>Programmer<br></h2>
-                    <h2> Web developer <br></h2>
-                    <h3><span>Experienced Communicator</span></h3>
-                    <h3><span>Global Vision</span></h3>
-                    <p>Technology</p>
-                    <p>Creativity</p>
-                    <p>Multicultural expertise</p>
-                    <a href="cv.html">More about me</a>
-                </div>
-                <div class="imgBox">
-                    <img src="img/1211563458-Photoroom.png" alt="">
-                </div>
+    <main>
+        <div class="contenido">
+            <div class="tituloBox">
+                <h2>Programmer<br></h2>
+                <h2> Web developer <br></h2>
+                <h3><span>Experienced Communicator</span></h3>
+                <h3><span>Global Vision</span></h3>
+                <p>Technology</p>
+                <p>Creativity</p>
+                <p>Multicultural expertise</p>
+                <a href="cv.html">More about me</a>
             </div>
-            <div class="copyright">
-                <p>&copy; 2025 Peilei Ye Jin | Personal Website. All rights reserved.</p>
+            <div class="imgBox">
+                <img src="img/1211563458-Photoroom.png" alt="">
             </div>
-            <ul class="redesSociales">
-                <li>
-                    <a href="#">
-                        <ion-icon name="mail"></ion-icon>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <ion-icon name="logo-linkedin"></ion-icon>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <ion-icon name="logo-github"></ion-icon>
-                    </a>
-                </li>
-            </ul>
-        </main>       
-    </section>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="copyright">
+            <p>&copy; 2025 Peilei Ye Jin | Personal Website. All rights reserved.</p>
+        </div>
+        <ul class="redesSociales">
+            <li>
+                <a href="mailto:ye.peilei@gmail.com">
+                    <ion-icon name="mail"></ion-icon>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/PeileiYe">
+                    <ion-icon name="logo-github"></ion-icon>
+                </a>
+            </li>
+        </ul>
+    </footer>               
+    
     <script>
         const introSeen = sessionStorage.getItem('introSeen');
-        if (introSeen) {
-            document.addEventListener("DOMContentLoaded", () => {
-            document.querySelector('.intro').style.display = 'none';
-            document.querySelector('.contenido').style.opacity = '1';
-            document.querySelector('.tituloBox').style.animationPlayState = 'running';
-            document.querySelector('.imgBox').style.animationPlayState = 'running';
-          });
-        } else {
-          sessionStorage.setItem('introSeen', 'true');
-    
-          setTimeout(() => {
-            document.querySelector('.intro').style.animation = 'fadeOutIntro 1s forwards';
-          }, 3500);
       
-          setTimeout(() => {
-            document.querySelector('.intro').style.display = 'none';
-            document.querySelector('.contenido').style.opacity = '1';
-            document.querySelector('.tituloBox').style.animationPlayState = 'running';
-            document.querySelector('.imgBox').style.animationPlayState = 'running';
-          }, 5000);
-        }
-    </script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const intro = document.querySelector('.intro');
+          const contenido = document.querySelector('.contenido');
+          const tituloBox = document.querySelector('.tituloBox');
+          const imgBox = document.querySelector('.imgBox');
+      
+          if (introSeen) {
+            intro.style.display = 'none';
+            contenido.style.opacity = '1';
+            tituloBox.style.animationPlayState = 'running';
+            imgBox.style.animationPlayState = 'running';
+          } else {
+            sessionStorage.setItem('introSeen', 'true');
+      
+            setTimeout(() => {
+              intro.style.animation = 'fadeOutIntro 1s forwards';
+            }, 3000);
+      
+            setTimeout(() => {
+              intro.style.display = 'none'; // ✅ fully hides the overlay
+              contenido.style.opacity = '1';
+              tituloBox.style.animationPlayState = 'running';
+              imgBox.style.animationPlayState = 'running';
+            }, 4500);
+          }
+        });
+      </script>
+      
     
 </body>
 </html>

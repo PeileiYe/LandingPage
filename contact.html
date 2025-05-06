@@ -2,32 +2,73 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
   <link rel="stylesheet" href="css/style.css">
   <link rel="shortcut icon" href="img/favicon.jpg" type="image/x-icon">
   <title>Contact</title>
 </head>
 <body class="contact">
-    <div class="formBox">
-        <h1>Contact Me</h1>
-        <form action="mailto:ye.peilei@gmail.com" method="POST">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="youremail@gmail.com" required>
-
-            <label for="name">Telephone:</label>
-            <input type="text" id="telephone" name="telephone" placeholder="+34 666666666">
-            
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="6" required></textarea>
-            
-            <button type="submit">Send Message</button>
-        </form>
-    </div>
-    <div class="copyright">
-        <p>&copy; 2025 Peilei Ye Jin | Personal Website. All rights reserved.</p>
-    </div>
+    <header>
+        <a href="index.html" class="logo">Peilei Ye Jin</a>
+        <ul class="navbar">
+            <li>
+                <a href="cv.html">CV</a>
+            </li>
+            <li>
+                <a href="project.html">Projects</a>
+            </li>
+            <li>
+                <a href="#">Services</a>
+            </li>  
+            <li>
+                <a href="contact.html">Contact Me</a>
+            </li>
+        </ul>
+    </header>
+    <main class="contact">
+        <div class="formBox">
+            <h1>Contact Me</h1>
+            <form action="mailto:ye.peilei@gmail.com" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="youremail@gmail.com" required>
+    
+                <label for="name">Telephone:</label>
+                <input type="text" id="telephone" name="telephone" placeholder="+34 666666666">
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+                
+                <button type="submit">Send Message</button>
+            </form>
+        
+    </main>
+    <footer>
+        <div class="copyright">
+            <p>&copy; 2025 Peilei Ye Jin | Personal Website. All rights reserved.</p>
+        </div>
+        <ul class="redesSociales">
+            <li>
+                <a href="mailto:ye.peilei@gmail.com">
+                    <ion-icon name="mail"></ion-icon>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/PeileiYe">
+                    <ion-icon name="logo-github"></ion-icon>
+                </a>
+            </li>
+        </ul>
+    </footer>
+    
 
 </body>
 </html>

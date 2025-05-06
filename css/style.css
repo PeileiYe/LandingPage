@@ -4,103 +4,166 @@
     --pink:rgb(218, 112, 214); 
 }
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0rem;
+    padding: 0rem;
     box-sizing: border-box;
     font-family: "Open Sans", sans-serif;
 }
+
+
+
+body { background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;}
+
+/**************************************** HEADER ****************************************************/
+header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10vh;
+    padding: 2.5rem 6.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+
+.logo {
+    color: white;
+    font-size: 1.8em;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: var(--pink);
+    border-radius: 0.3rem;
+    padding: 0 0.625rem;
+    font-family: "Lora", serif;
+    font-weight: 600;
+}
+
+.logo:hover {
+    color: var(--pink);
+    background: whitesmoke;
+    transition: 1s;
+}
+
+.navbar {
+    display: flex;
+    gap: 1.8rem;
+    list-style: none;
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: 600;
+    padding: 0.625rem;
+    transition: 0.3s;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.navbar li a:hover {
+    border-bottom: 0.3125rem solid var(--pink);
+}
+
+/****************************************************** Footer ***********************************************************/
+footer {
+    text-align: center;
+    padding: 1rem;
+    color: whitesmoke;
+    background: transparent; /* or use rgba if you want a background */
+    margin-top: auto;
+    position: relative;
+  }
+
+/* COPYRIGHT */
+.copyright {
+    position: absolute;
+    bottom: 0rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0rem 6rem 1.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyright p {
+    color: whitesmoke;
+    text-align: center;
+    font-size: 1rem;
+
+}
+
+/* REDES SOCIALES */
+.redesSociales {
+    position: absolute;
+    right: 0rem;
+    bottom: 0rem;
+    margin-right: 8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 6.25rem 0rem;
+    list-style: none;
+}
+
+.redesSociales li {
+    padding: 0.625rem;
+}
+
+.redesSociales li a {
+    color: whitesmoke;
+    font-size: 2em;
+    transition: 0.3s;
+}
+
+.redesSociales li:hover a {
+    color: var(--pink);
+    font-size: 2em;
+    transition: 0.3s;
+}
+
+
+
 
 /**********************************Página inicial**********************************************/
 
 body.home{
     background-image: url(../img/aesthetic-background-with-gradient-neon-led-light-effect.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-attachment: fixed;
 }
-section.home {
+
+
+/* CONTENIDO */
+body.home main{
     position: relative;
     width: 100%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 100px 30px 30px 30px;
+    padding: 6.25rem 1.875rem 1.875rem 1.875rem;
+    margin-top: 10vh;
 }
 
-
-/* HEADER */
-header.home {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    padding: 40px 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header.home .logo {
-    color: white;
-    font-size: 1.8em;
-    text-decoration: none;
-    text-transform: uppercase;
-    background: var(--pink);
-    border-radius: 5px;
-    padding: 0 10px;
-    font-family: "Lora", serif;
-    font-weight: 600;
-}
-
-header.home .logo:hover {
-    color:   var(--pink);
-    background: whitesmoke;
-    transition: 1s;
-}
-
-header.home .navbar {
-    position: relative;
-    display: flex;
-}
-
-header.home .navbar li {
-    list-style: none;
-    margin-left: 30px;
-}
-
-header.home .navbar li a {
-    text-decoration: none;
-    color: whitesmoke;
-    font-weight: 600;
-    padding: 10px;
-    transition: 0.3s;
-    font-size: 1.1em;
-    text-transform: uppercase;
-}
-
-header.home .navbar li a:hover {
-    border-bottom: 5px solid var(--pink);
-    padding: 2px;
-}
-
-/* CONTENIDO */
 .contenido {
     width: 100%;
-    height: 85vh; 
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center; 
     position: relative;
     overflow: hidden;
-    margin-top: 15px; 
     opacity: 0;
 }
 
 /* TITULOBOX */
 .contenido .tituloBox {
-    max-width: 600px;
+    max-width: 37.5rem;
     text-align: center;
     opacity: 0;
     animation: moveLeft 0.5s ease forwards;
@@ -123,10 +186,10 @@ header.home .navbar li a:hover {
 .contenido .tituloBox h3 span {
     background:   var(--pink);
     color: white;
-    padding: 0 10px;
+    padding: 0rem 0.625rem;
     font-family: "Lora", serif;
     font-weight: 500;
-    border-radius: 20px;
+    border-radius: 1.25rem;
 }
 
 .contenido .tituloBox p {
@@ -135,7 +198,7 @@ header.home .navbar li a:hover {
     color: whitesmoke;
     font-family: "Lora", serif;
     font-weight: 400;
-    margin: 10px;
+    margin: 0.625rem;
 }
 
 .contenido .tituloBox a {
@@ -143,9 +206,9 @@ header.home .navbar li a:hover {
     text-transform: uppercase;
     background: whitesmoke;
     color:var(--pink);
-    padding: 10px 20px;
-    border-radius: 20px;
-    letter-spacing: 2px;
+    padding: 0.625rem 1.25rem;
+    border-radius: 1.25rem;
+    letter-spacing: 0.125rem;
     transition: 0.5s;
 }
 
@@ -157,7 +220,7 @@ header.home .navbar li a:hover {
 
 /* IMGBOX */
 .contenido .imgBox {
-    width: 600px;
+    width: 37.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -171,57 +234,12 @@ header.home .navbar li a:hover {
     height: 60vh;
 }
 
-/* COPYRIGHT */
-.copyright {
-    position: absolute;
-    bottom: 0px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 0 100px 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.copyright p {
-    color: whitesmoke;
-    text-align: center;
-}
-
-/* REDES SOCIALES */
-.redesSociales {
-    position: absolute;
-    right: 0px;
-    bottom: 0px;
-    margin-right: 125px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 100px 0px;
-    list-style: none;
-}
-
-.redesSociales li {
-    padding: 10px;
-}
-
-.redesSociales li a {
-    color: whitesmoke;
-    font-size: 2.5em;
-    transition: 0.3s;
-}
-
-.redesSociales li:hover a {
-    color: black;
-    font-size: 2.5em;
-    transition: 0.3s;
-}
 
 /* CIRCULO DECORATIVO */
 .circulo {
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 0rem;
+    left: 0rem;
     background: rgba(78, 238, 233, 0.6);
     clip-path: circle(620px at right 700px);
     width: 100%;
@@ -231,8 +249,8 @@ header.home .navbar li a:hover {
 
 .circulo2 {
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 0rem;
+    left: 0rem;
     background: rgba(240, 242, 242, 0.5);
     clip-path: circle(470px at right 700px);
     width: 100%;
@@ -248,7 +266,7 @@ header.home .navbar li a:hover {
     }
     100% {
         opacity: 1;
-        transform: translateX(-70px); 
+        transform: translateX(-4.5rem); 
     }
 }
 
@@ -259,7 +277,7 @@ header.home .navbar li a:hover {
     }
     100% {
         opacity: 1;
-        transform: translateX(60px); 
+        transform: translateX(3.75rem); 
     }
 }
 
@@ -286,7 +304,7 @@ header.home .navbar li a:hover {
     animation: fadeInIntro 2s forwards;
     font-family: "Lora", serif;
     font-weight: 400;
-    letter-spacing: 2px;
+    letter-spacing: 0.125rem;
 }
 
 .main-line {
@@ -316,19 +334,37 @@ header.home .navbar li a:hover {
 
 /*********************************** Página de CV *******************************/
 
-body.cv{
+body.cv {
     background-image: url(../img/minimal-digital-futuristic-technology-background.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-attachment: fixed;
-    color:whitesmoke;
+    color: whitesmoke;
     text-decoration: none;
     text-align: left;
     line-height: 1.6;
-    max-width: 800px;
+    max-width: 50rem;
     margin: 2rem auto;
     padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+      
+
+header.cv .navbar {
+    position: fixed;
+    top: 2rem;         
+    right: 2rem;     
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+  }
+
+main.cv{
+    background-color: rgba(255, 255, 255, 0.1); 
+    padding:1.5rem;
 }
 
 body.cv a {
@@ -341,15 +377,15 @@ body.cv .logo {
     font-size: 1em;
     text-decoration: none;
     text-transform: uppercase;
-    background:   var(--pink);;
-    border-radius: 5px;
-    padding: 0 10px;
+    background: var(--pink);
+    border-radius: 0.3rem;
+    padding: 0rem 0.625rem;
     font-family: "Lora", serif;
     font-weight: 600;
 }
 
 body.cv .logo:hover {
-    color:   var(--pink);
+    color: var(--pink);
     background: whitesmoke;
     transition: 1s;
 }
@@ -358,65 +394,69 @@ body.cv p {
     padding-bottom: 0.3rem;
     margin-top: 1rem;
     font-family: "Raleway", sans-serif;
-  }
+}
+
 body.cv h1 {
     padding-bottom: 0.3rem;
     margin-top: 2rem;
     text-align: center;
     font-family: "Raleway", sans-serif;
-  }
+}
 
-section.cv{
-    margin-bottom: 2rem;}
-  
+section.cv {
+    margin-bottom: 2rem;
+}
+
 section.cv h2 {
     font-family: "Raleway", sans-serif;
-    border-bottom: 2px solid;
+    border-bottom: 0.125rem solid;
     padding-bottom: 0.3rem;
     margin-top: 2rem;
     text-transform: uppercase;
     color: whitesmoke;
-  }
+}
+
 section.cv h3 {
     margin-top: 1rem;
     font-size: 1.1rem;
     font-family: "Raleway", sans-serif;
     text-transform: uppercase;
-  }
+}
+
 section.cv h4 {
     margin-top: 1rem;
     font-size: 0.9rem;
     font-family: "Raleway", sans-serif;
     text-align: right;
-    color:var(--pink)
-  }
-  
+    color: var(--pink);
+}
+
 section.cv ul {
     padding-left: 1.5rem;
-  }
-  
-  #contact{
+}
+
+#contact {
     text-align: center;
     margin-top: 2rem;
     font-family: "Raleway", sans-serif;
 }
-#about_me{
+
+#about_me {
     text-align: justify;
     margin-top: 2rem;
     font-family: "Raleway", sans-serif;
 }
 
-/* Download button*/
-
+/* Download button */
 section.download {
     text-align: center;
-    margin-top: 50px;
-  }
-  
+    margin-top: 3.125rem;
+}
+
 #download_btn {
     display: inline-block;
-    padding: 12px 24px;
-    font-size: 16px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
     font-family: "Lora";
     font-weight: 600;
     text-align: center;
@@ -425,32 +465,19 @@ section.download {
     color: whitesmoke;
     background: var(--pink);
     border: none;
-    border-radius: 8px;
+    border-radius: 0.5rem;
     cursor: pointer;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  }
-  
+}
+
 #download_btn:hover {
-    background-color:whitesmoke;
+    background-color: whitesmoke;
     color: var(--pink);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.2);
     transition: 0.5s;
-  }
-
-body.cv #copyright {
-    margin-top: 10px;
-    bottom: 0px;
-    padding: 0 100px 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-body.cv #copyright p {
-    color: whitesmoke;
-    text-align: center;
-}
-
+    
 
 /*************************** Formulario de contacto ***************************************/
 
@@ -464,64 +491,72 @@ body.contact {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-  }
-  
-  .formBox {
+}
+
+main.contact{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formBox {
     background-color: rgba(255, 255, 255, 0.6); 
-    max-width: 500px;
-    margin: 80px auto;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-  }
-  
+    max-width: 31.25rem;
+    margin: 5rem auto;
+    padding: 1.875rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.2);
+}
+
 .formBox h1 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
     color: #282828;
+}
 
-  }
-  
 form label {
     display: block;
-    margin-top: 15px;
+    margin-top: 0.9375rem;
     font-weight: bold;
     color: #282828;
-  }
+}
 
 form input, form textarea {
     width: 100%;
-    padding: 10px;
-    margin-top: 6px;
+    padding: 0.625rem;
+    margin-top: 0.375rem;
     border: 1px solid whitesmoke;
-    border-radius: 6px;
-    font-size: 15px;
-  }
-  
+    border-radius: 0.375rem;
+    font-size: 0.9375rem;
+}
+
 form button {
-    margin-top: 20px;
+    margin-top: 1.25rem;
     width: 100%;
-    padding: 12px;
-    background-color:var(--pink);
+    padding: 0.75rem;
+    background-color: var(--pink);
     border: none;
     color: white;
     font-family: "Lora";
     font-weight: 600;
-    font-size: 16px;
-    border-radius: 6px;
+    font-size: 1rem;
+    border-radius: 0.375rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
-  
+}
+
 form button:hover {
     background-color: rgb(164, 82, 162);
     transition: 0.5s;
-  }
+}
 
 body.contact .copyright {
-    margin-top: 10px;
-    bottom: 0px;
-    padding: 0 100px 30px;
+    margin-top: 0.625rem;
+    bottom: 0rem;
+    padding: 0rem 6.25rem 1.875rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -533,8 +568,6 @@ body.contact .copyright p {
 }
 
 /******************************* Projectos ***************************************/
-
-
 
 body.project {
     min-height: 100vh;
@@ -549,156 +582,347 @@ body.project {
     font-family: "Raleway", sans-serif;
 }
 
-.content{
-    margin-top: 100px;
+main.project{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6.25rem 1.875rem 1.875rem 1.875rem;
+    }
+
+.content {
+    margin-top: 8rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    gap: 40px;
-    flex-wrap: nowrap; 
-    padding: 40px;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    padding: 2.5rem;
     flex: 1;
     width: 100%;
 }
 
-.card{
+.card {
     position: relative;
-    width: 300px;
-    height: 350px;
-    margin: 20px;
+    width: 19rem;
+    height: 22rem;
+    margin: 1.25rem;
 }
 
-.card .face{
+.card .face {
     position: absolute;
     height: 100%;
     width: 100%;
     backface-visibility: hidden;
-    border-radius: 10px;
+    border-radius: 0.625rem;
     overflow: hidden;
     transition: 0.5s;
 }
 
-.card .front{
+.card .front {
     transform: perspective(600px) rotateY(0deg);
-    box-shadow: 0px 5px 10px #000;
+    box-shadow: 0rem 0.3rem 0.625rem #000;
 }
 
-.card .front img{
+.card .front img {
     position: absolute;
     height: 100%;
     width: 100%;
-    object-fit: cover; /*ajustar el contenido al su contenedor*/
+    object-fit: cover;
 }
 
-.card .front h3{
+.card .front h3 {
     position: absolute;
-    bottom:0px;
+    bottom: 0rem;
     width: 100%;
-    height: 45px;
-    line-height: 45px;
-    color:whitesmoke;
+    height: 2.8rem;
+    line-height: 2.8rem;
+    color: whitesmoke;
     background-color: rgba(0, 0, 0, 0.6);
     text-align: center;
+    margin-top: 1.25rem;
+    font-size: 1.25rem;
+    letter-spacing: 0.125rem;
 }
 
-.card .back{
+.card .back {
     transform: perspective(600px) rotateY(180deg);
     background-color: rgb(27, 87, 122);
-    padding: 15px;
-    color:whitesmoke; 
+    padding: 0.9375rem;
+    color: whitesmoke;
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
-    box-shadow: 0px 5px 10px #000;
+    box-shadow: 0rem 0.3125rem 0.625rem #000;
 }
 
 .card .back .link {
     border-top: 1px solid whitesmoke;
-    height: 80px;
-    line-height: 80px;
+    height: 5rem;
+    line-height: 5rem;
 }
 
-.card .front h3{
-    margin-top: 20px;
-    font-size: 20px;
-    letter-spacing: 2px;
-    position: absolute;
+.card .back p {
+    letter-spacing: 0.0625rem;
+    margin-top: 1.5625rem;
+    margin-bottom: 0.625rem;
 }
 
-.card .back p{
-    letter-spacing: 1px;
-    margin-top: 25px;
-    margin-bottom: 10px;
-
-}
-.card .back .link a{
-    height: 45px;
-    padding: 5px;
-    color:whitesmoke;
+.card .back .link a {
+    height: 2.8125rem;
+    padding: 0.3125rem;
+    color: whitesmoke;
     background-color: var(--pink);
-    border-radius: 5px;
+    border-radius: 0.3125rem;
     font-family: "Lora";
     font-weight: 600;
-    font-size: 18px;
+    font-size: 1.125rem;
     text-decoration: none;
 }
 
-.card .back a:hover{   
+.card .back a:hover {
     color: var(--pink);
     background-color: whitesmoke;
     transition: 0.5s;
 }
 
-.card:hover .front{
+.card:hover .front {
     transform: perspective(600px) rotateY(180deg);
 }
 
-.card:hover .back{
+.card:hover .back {
     transform: perspective(600px) rotateY(360deg);
 }
 
-body.project .copyright {
-    margin-top: 10px;
-    bottom: 0px;
-    padding: 0 100px 30px;
+
+.backhome {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-body.project .copyright p {
-    color: whitesmoke;
-    text-align: center;
-}
-
-footer.project {
-    padding: 10px 0;
+    margin: 3rem auto; 
     text-align: center;
   }
-  
-footer.project .backhome {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 100px;
 
-  }
-
-footer.project .backhome a{
+.backhome a {
     text-decoration: none;
     text-transform: uppercase;
     background: whitesmoke;
-    color:var(--pink);
-    padding: 10px 20px;
-    border-radius: 20px;
-    letter-spacing: 2px;
+    color: var(--pink);
+    padding: 0.625rem 1.25rem;
+    border-radius: 1.25rem;
+    letter-spacing: 0.125rem;
     transition: 0.5s;
 }
 
-footer.project .backhome a:hover {
-    color: whitesmoke;
+.backhome a:hover {color: whitesmoke;
     background: var(--pink);
-    transition: 0.5s;
-}
+    transition: 0.5s;}
 
+
+/********************************************** RESPONSIVE ************************************************************/
+
+
+/* para 576px */
+@media (max-width: 576px) {
+    header {
+      flex-direction: column;
+      padding: 1rem;
+      height: auto;
+    }
+  
+    .navbar {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+  
+    .contenido {
+      flex-direction: column;
+      height: auto;
+      padding: 1rem;
+    }
+  
+    .contenido .imgBox,
+    .contenido .tituloBox {
+      width: 90%;
+    }
+  
+    .contenido .imgBox img {
+      height: auto;
+      width: 100%;
+    }
+  
+    .content {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 1rem;
+      }
+    
+      .card {
+        width: 90vw;
+        height: auto;
+        perspective: 1000px;
+      }
+    
+      .card .face {
+        position: relative;
+        height: auto;
+        min-height: 20rem;
+      }
+    
+      .card .front {
+        transform: none !important;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      }
+    
+      .card .front img {
+        position: relative;
+        width: 100%;
+        height: auto;
+      }
+    
+      .card .front h3 {
+        position: relative;
+        font-size: 1rem;
+        line-height: 2rem;
+        height: auto;
+        padding: 0.5rem 0;
+        margin-top: 0;
+      }
+    
+      .card .back {
+        transform: none !important;
+        position: relative;
+        padding: 1rem;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      }
+    
+      .card:hover .front,
+      .card:hover .back {
+        transform: none !important;
+      }
+    
+      .card .back .link {
+        height: auto;
+        line-height: normal;
+        padding-top: 1rem;
+      }
+    
+      .card .back p {
+        margin: 1rem 0;
+        font-size: 0.95rem;
+      }
+    
+      .card .back .link a {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        display: inline-block;
+      }
+    
+
+    .formBox {
+      margin: 2rem auto;
+      width: 90%;
+      padding: 1rem;
+    }
+  
+    .backhome {
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+  
+    .redesSociales {
+      position: static;
+      margin-top: 2rem;
+      justify-content: center;
+      gap: 1rem;
+      padding: 0;
+    }
+  
+    .copyright {
+      position: static;
+      margin-top: 1rem;
+      text-align: center;
+    }
+  }
+  
+  /* para 992px */
+  @media (min-width: 577px) and (max-width: 992px) {
+    header {
+      padding: 1.5rem 2rem;
+    }
+  
+    .navbar {
+      gap: 2rem;
+      justify-content: center;
+    }
+  
+  .content {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .card {
+    width: 45%;
+    height: auto;
+    perspective: 1000px;
+  }
+
+  .card .face {
+    height: auto;
+    position: relative;
+    min-height: 20rem;
+  }
+
+  .card .front img {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .card .back {
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+
+  .card .back .link {
+    height: auto;
+    line-height: normal;
+    padding-top: 1rem;
+  }
+
+  .card .back p {
+    margin: 1rem 0;
+    font-size: 1rem;
+  }
+
+  .card .back .link a {
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    display: inline-block;
+  }
+  
+    .backhome {
+      margin: 3rem auto 2rem;
+    }
+  
+    .formBox {
+      margin: 3rem auto;
+      width: 80%;
+      padding: 1.5rem;
+    }
+  
+    .redesSociales {
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 1rem;
+    }
+  }
+  
