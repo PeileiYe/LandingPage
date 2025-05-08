@@ -726,11 +726,17 @@ main.project{
 
 
 /* para 576px */
+
 @media (max-width: 576px) {
+
+    
+/* HEADER & FOOTER */
+    
     header {
       flex-direction: column;
       padding: 1rem;
       height: auto;
+      flex-wrap: wrap;
     }
   
     .navbar {
@@ -739,30 +745,70 @@ main.project{
       gap: 1rem;
       margin-top: 1rem;
     }
-  
+
+    .footerContent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        padding: 1.5rem;
+        text-align: center;
+      }
+      
+      .footerContent .copyright {
+        margin-bottom: 0.5rem;
+      }
+      
+      .footerContent .redesSociales {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        padding: 0;
+        margin: 0;
+        font-size: 1.5rem;
+        list-style: none;
+      }
+      
+
+
+    /*  HOME */
+
+    .circulo, .circulo2{
+        display: none;
+    }
+
     .contenido {
       flex-direction: column;
       height: auto;
       padding: 1rem;
+      margin: auto;
     }
   
-    .contenido .imgBox,
     .contenido .tituloBox {
-      width: 90%;
+        width: 100%;
+        left: 0%;
+        transform: translateX(0);
+        margin: auto;
+    }
+
+    .contenido .imgBox {
+      display: none;
     }
   
-    .contenido .imgBox img {
-      height: auto;
-      width: 100%;
-    }
-  
+    body.home .imgBox img {
+        display: none;
+      }
+
+  /*  PROYECTO */
     .content {
         flex-direction: column;
         align-items: center;
         gap: 1.5rem;
         padding: 1rem;
+        display: flex;
+        flex-wrap: wrap;
       }
-    
       .card {
         width: 90vw;
         height: auto;
@@ -776,7 +822,7 @@ main.project{
       }
     
       .card .front {
-        transform: none !important;
+        transform: none;
         box-shadow: 0 4px 8px rgba(0,0,0,0.2);
       }
     
@@ -796,7 +842,7 @@ main.project{
       }
     
       .card .back {
-        transform: none !important;
+        transform: none ;
         position: relative;
         padding: 1rem;
         box-shadow: 0 4px 8px rgba(0,0,0,0.2);
@@ -804,7 +850,7 @@ main.project{
     
       .card:hover .front,
       .card:hover .back {
-        transform: none !important;
+        transform: none;
       }
     
       .card .back .link {
@@ -824,6 +870,13 @@ main.project{
         display: inline-block;
       }
     
+      
+    .backhome {
+        display: none;
+    }
+    
+
+/* contacto*/
 
     .formBox {
       margin: 2rem auto;
@@ -836,32 +889,41 @@ main.project{
       padding: 0 1rem;
     }
   
-    .redesSociales {
-      position: static;
-      margin-top: 2rem;
-      justify-content: center;
-      gap: 1rem;
-      padding: 0;
-    }
-  
-    .copyright {
-      position: static;
-      margin-top: 1rem;
-      text-align: center;
-    }
-  }
+}
   
   /* para 992px */
   @media (min-width: 577px) and (max-width: 992px) {
+
     header {
       padding: 1.5rem 2rem;
+      display: flex;
+      flex-wrap: wrap;
     }
+
   
     .navbar {
       gap: 2rem;
       justify-content: center;
     }
+
+    .circulo, .circulo2{
+        display: none;
+    }
+    .contenido .tituloBox {
+        width: 100%;
+        left: 0%;
+        transform: translateX(0);
+        margin: auto;
+    }
+
+    .contenido .imgBox {
+      display: none;
+    }
   
+    body.home .imgBox img {
+        display: none;
+      }
+
   .content {
     flex-wrap: wrap;
     justify-content: center;
@@ -910,7 +972,7 @@ main.project{
   }
   
     .backhome {
-      margin: 3rem auto 2rem;
+      display: none;
     }
   
     .formBox {
@@ -918,11 +980,30 @@ main.project{
       width: 80%;
       padding: 1.5rem;
     }
-  
-    .redesSociales {
-      justify-content: center;
-      gap: 1.5rem;
-      padding: 1rem;
-    }
+    .footerContent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        padding: 1.5rem;
+        text-align: center;
+      }
+      
+      .footerContent .copyright {
+        margin-bottom: 0.5rem;
+      }
+      
+      .footerContent .redesSociales {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        padding: 0;
+        margin: 0;
+        font-size: 1.5rem;
+        list-style: none;
+      }
+      
+
   }
   
